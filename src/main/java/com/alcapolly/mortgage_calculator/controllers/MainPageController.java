@@ -51,7 +51,7 @@ public class MainPageController {
 
 
         // график платежей
-        String[][] table = new String[(int) mortgagePeriodInMonths + 1][7];
+        String[][] table = new String[(int) mortgagePeriodInMonths + 1][8];
         table[0][0] = "Месяц";
         table[0][1] = "Проценты";
         table[0][2] = "Основной долг";
@@ -59,6 +59,7 @@ public class MainPageController {
         table[0][4] = "Кредит";
         table[0][5] = "Аренда квартиры";
         table[0][6] = "Итого в месяц";
+        table[0][7] = "Остаток по ипотеке";
         double remainingDebt = mortgageAmount;
 
         for (int i = 1; i <= mortgagePeriodInMonths ; i++) {
@@ -80,6 +81,8 @@ public class MainPageController {
                 table[i][5] = String.valueOf(0);
             }
             table[i][6] = String.valueOf((int)(interests + mainDebt + Integer.parseInt(table[i][4]) + Integer.parseInt(table[i][5])));
+            table[i][7] = String.valueOf((int) remainingDebt);
+
         }
 
         model.addAttribute("paymentsTable", table);
