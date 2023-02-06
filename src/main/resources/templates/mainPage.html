@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+
+<p>
+    Первый взнос по ипотеке:</p>
+<p th:text="${firstPayment}"></p>
+<br>
+<p>
+Ежемесячный платеж по ипотеке:</p>
+<p th:text="${monthlyPayment}"></p>
+<br>
+<p>
+    Переплата по ипотеке (всего):</p>
+<p th:text="${overPayment}"></p>
+
+<br>
+<p>
+    Итого выплаты по ипотеке за весь срок:</p>
+<p th:text="${totalPayment}"></p>
+
+<br>
+<p>
+    Сумма уплаченная за весь период с учетом кредита и съема квартиры (всего):</p>
+<p th:text="${totalPaymentForEverything}"></p>
+
+<br>
+
+<p>
+    Таблица платежей:</p>
+<table>
+    <tr th:each="i: ${paymentsTable}">
+        <td th:each="item: ${i}">
+            <span th:text="${item}" style="width:30px;height:30px;text-align:center"></span >
+        </td>
+    <tr>
+</table>
+
+
+</body>
+</html>

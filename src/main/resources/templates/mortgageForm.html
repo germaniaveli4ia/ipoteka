@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" action="/calculate">
+    <label for="apartmentCost">Стоимость квартиры</label>
+    <input name="apartmentCost" type="number" id="apartmentCost"/>
+
+    <br>
+
+    <label for="advanceMoney">Первый взнос, %</label>
+    <input name="advanceMoney" type="number" id="advanceMoney"/>
+
+    <br>
+
+    <label for="interestRate">Процентная ставка, %</label>
+    <input name="interestRate" type="number" step="0.01" id="interestRate"/>
+
+    <br>
+
+    <label for="period">Срок ипотеки, лет</label>
+    <input name="period" type="number" id="period"/>
+
+    <br>
+
+    <label for="rentCost">Стоимость аренды квартиры в мес</label>
+    <input name="rentCost" type="number" id="rentCost"/>
+
+    <br>
+
+    <label for="rentPeriod">Продолжительность аренды квартиры, мес</label>
+    <input name="rentPeriod" type="number" id="rentPeriod"/>
+
+    <br>
+
+    <label for="creditAmount">Сумма кредита на первый взнос</label>
+    <input name="creditAmount" type="number" id="creditAmount"/>
+
+    <br>
+
+    <label for="creditInterestRate">Процентная ставка по кредиту, %</label>
+    <input name="creditInterestRate" type="number" id="creditInterestRate"/>
+
+    <br>
+
+    <label for="creditPeriod">Срок кредита, лет</label>
+    <input name="creditPeriod" type="number" id="creditPeriod"/>
+
+    <br>
+
+    <input type="submit" value="Отправить"/>
+
+</form>
+
+</body>
+</html>
